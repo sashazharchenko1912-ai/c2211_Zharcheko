@@ -34,22 +34,22 @@ class Person:
     def work(self):
         self.money += self.job.salary
         self.fatigue += self.job.fatigue
-        print(f"  👔 Працює як {self.job.title}")
+        print(f"Працює як {self.job.title}")
 
     def eat(self, food):
         self.pleasure += food.pleasure
         self.fatigue -= 5
-        print(f"  🍔 Їсть {food.name}")
+        print(f"Їсть {food.name}")
 
     def rest(self):
         self.fatigue -= 10
-        print("  😴 Відпочиває вдома")
+        print("Відпочиває вдома")
 
     def status(self):
         self.fatigue = max(0, self.fatigue)
         self.pleasure = min(100, self.pleasure)
         print(
-            f"  📊 Стан: гроші={self.money}, "
+            f"Стан: гроші={self.money}, "
             f"задоволення={self.pleasure}, "
             f"втома={self.fatigue}"
         )
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     person.get_job(job)
 
     for day in range(1, 366):
-        print(f"\n📅 День {day}")
+        print(f"\nДень {day}")
 
         person.work()
         person.eat(food)
